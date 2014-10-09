@@ -4,19 +4,26 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<?php
+	$name = $_GET['name'];
+?>
+
+<script type="text/javascript">
+	var filename = <?php echo '\''.$name.'\''; ?>;
+</script>
+
 <script src="/javascripts/httpRequest.js" type="text/javascript" charset="utf-8" async defer></script>
+
 	<title>My Title</title>
+
 </head>
 
 <body>
-	<h1>XMLHttpRequest</h1>
 
-	<!-- <button onclick="loadText('test.txt')">test button</button> -->
-<form action="create.php" method="post" accept-charset="utf-8">
-	<input type="text" name="filename" value="text">
-	<input type="submit" name="name" value="create">
-</form>
-	<!-- <canvas id="view" width=1280px height=360px></canvas> -->
+	<h1><?php echo $name; ?></h1>
+
+	<canvas id="view" width=1280px height=360px></canvas>
 
 
 
