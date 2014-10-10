@@ -10,12 +10,14 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 ?>
 
 <script type="text/javascript">
+
 <?php if( is_file('file/'.$filename) ): ?>
 	var filename = <?php echo '\''.$filename.'\''; ?>;
 	var stringcode = <?php echo '"'.file_get_contents('file/'.$filename).'"'; ?>;
 <?php else: ?>
 	var stringcode = 'file don\'t exists!';
 <?php endif ?>
+
 </script>
 
 <script src="/javascripts/httpRequest.js" type="text/javascript" charset="utf-8" async defer></script>

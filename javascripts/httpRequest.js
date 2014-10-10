@@ -1,23 +1,3 @@
-//test1
-
-var req = new XMLHttpRequest();
-
-function loadText (path) {
-	req.onreadystatechange= readyStateChange;
-
-	req.open('get',path,true);
-	req.send('');
-
-}
-
-function readyStateChange (argument) {
-	if (req.readyState==4) {
-		alert(req.responseText);
-	}
-}
-
-
-//test2
 var context;
 var timer;
 
@@ -35,7 +15,6 @@ window.onload = function() {
 function onKeyDown( e ) {
 	// ここでサーバに送信する！
 	var xmlHttpRequest = new XMLHttpRequest();
-	console.log(filename);
     xmlHttpRequest.open( "GET", "keyDown.php?filename=" + filename + "&keycode=" + String.fromCharCode(e.keyCode), true );
 
     xmlHttpRequest.onreadystatechange = function() {
