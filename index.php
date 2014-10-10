@@ -16,6 +16,10 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	<input type="text" name="filename" value="text">
 	<input type="submit" name="name" value="create">
 </form>
+<form action="access.php" method="get" accept-charset="utf-8">
+	<input type="text" name="filename" value="text">
+	<input type="submit" name="name" value="access">
+</form>
 	<!-- <canvas id="view" width=1280px height=360px></canvas> -->
 
 

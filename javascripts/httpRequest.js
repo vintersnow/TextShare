@@ -30,15 +30,11 @@ window.onload = function() {
 	}
 }
 
-var stringbefore = '';
-var stringcode = '';
-
 
 // キーチェック
 function onKeyDown( e ) {
 	// ここでサーバに送信する！
 	var xmlHttpRequest = new XMLHttpRequest();
-	stringbefore = String.fromCharCode(e.keyCode);
 	console.log(filename);
     xmlHttpRequest.open( "GET", "keyDown.php?filename=" + filename + "&keycode=" + String.fromCharCode(e.keyCode), true );
 
