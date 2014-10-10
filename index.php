@@ -9,9 +9,21 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 </head>
 
 <body>
-<h1>XMLHttpRequest</h1>
+	<h1>XMLHttpRequest</h1>
 
-<button onclick="loadText('test.txt')">test button</button>
+	<!-- <button onclick="loadText('test.txt')">test button</button> -->
+<form action="create.php" method="post" accept-charset="utf-8">
+	<input type="text" name="filename" value="text">
+	<input type="submit" name="name" value="create">
+</form>
+
+<form action="access.php" method="get" accept-charset="utf-8">
+	<input type="text" name="filename" value="text">
+	<input type="submit" name="name" value="access">
+</form>
+	<!-- <canvas id="view" width=1280px height=360px></canvas> -->
+
+
 
 </body>
 </html>
