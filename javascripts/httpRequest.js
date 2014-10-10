@@ -59,5 +59,4 @@ function mainLoop() {
 	context.fillText( "何かKeyを押すのだ！", 20, 60 );
 	context.font = "16px Arial";
 	context.fillText(stringcode,20,100);
-	// context.fillText(stringbefore,20,200);
 }

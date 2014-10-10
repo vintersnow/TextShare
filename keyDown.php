@@ -4,9 +4,9 @@
  $keyCode = $_GET['keycode'];
  $filename = $_GET['filename'];
 
- $stringtext = file_get_contents('file/'.$filename.'.txt');
+ $stringtext = file_get_contents('file/'.$filename);
  $stringtext = $stringtext.$keyCode;
- file_put_contents('file/'.$filename.'.txt', $stringtext);
-	// print_r($keyCode);
+ file_put_contents('file/'.$filename, $stringtext);
+
 	echo $stringtext;
 ?>
