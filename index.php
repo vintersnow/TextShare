@@ -5,6 +5,21 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="/javascripts/httpRequest.js" type="text/javascript" charset="utf-8" async defer></script>
+<script type="text/javascript" src="openwysiwyg/scripts/wysiwyg.js"></script>
+<script type="text/javascript" src="openwysiwyg/scripts/wysiwyg-settings.js"></script>
+  <script type="text/javascript">
+    // Use it to attach the editor to all textareas with full featured setup
+    //WYSIWYG.attach('all', full);
+
+    // Use it to attach the editor directly to a defined textarea
+    WYSIWYG.attach('textarea1'); // default setup
+    WYSIWYG.attach('textarea2', full); // full featured setup
+    WYSIWYG.attach('textarea3', small); // small setup
+	
+    // Use it to display an iframes instead of a textareas
+    //WYSIWYG.display('all', full);  
+  </script>
+
 	<title>My Title</title>
 </head>
 
@@ -23,7 +38,11 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 </form>
 	<!-- <canvas id="view" width=1280px height=360px></canvas> -->
 
+<!-- test  -->
 
+<form action="form.php" method="post">
+<textarea id="textarea3" style='width:500px;height:300px;'></textarea>
+<input type="submit" value="送信">
 
 </body>
 </html>

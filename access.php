@@ -21,6 +21,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 </script>
 
 <script src="/javascripts/httpRequest.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="/javascripts/textarea.js" type="text/javascript" charset="utf-8" async defer></script>
 
 	<title>My Title</title>
 
@@ -30,7 +31,24 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 
 	<h1><?php echo $filename; ?></h1>
 
-	<canvas id="view" width=1280px height=360px></canvas>
+	<!-- <textarea id="comment1" style="width:500px;height:400px"></textarea> -->
+	<!-- <textarea id="comment2" style="width:500px;height:400px"></textarea> -->
+
+<form action="" name="fo1">
+<textarea id="comment1"></textarea><br>
+<input type="submit" value="送信">
+</form>
+<form action="" method="get" accept-charset="utf-8" name="fo2">
+<textarea name="" id="comment2"></textarea>
+</form>
+
+
+
+
+
+	<!-- <canvas id="view" width=1280px height=360px></canvas> -->
+
+
 
 
 

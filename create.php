@@ -2,6 +2,7 @@
 $filename = $_POST['filename'];
 
 touch('file/'.$filename);
+touch('file2/'.$filename);
 
 header("HTTP/1.1 301 Moved Permanently");
 $url = 'access?'.'filename='.$filename;
