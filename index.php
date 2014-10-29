@@ -5,8 +5,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="/javascripts/httpRequest.js" type="text/javascript" charset="utf-8" async defer></script>
-<script type="text/javascript" src="openwysiwyg/scripts/wysiwyg.js"></script>
-<script type="text/javascript" src="openwysiwyg/scripts/wysiwyg-settings.js"></script>
+<!-- <script type="text/javascript" src="openwysiwyg/scripts/wysiwyg.js"></script> -->
+<!-- <script type="text/javascript" src="openwysiwyg/scripts/wysiwyg-settings.js"></script> -->
   <script type="text/javascript">
     // Use it to attach the editor to all textareas with full featured setup
     //WYSIWYG.attach('all', full);

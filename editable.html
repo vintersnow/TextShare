@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<script src="/javascripts/editable.js" type="text/javascript" charset="utf-8" async defer></script>
+
+<title>contentEditable</title>
+
+<!-- <script type="text/javascript">
+//<![CDATA[
+var o = null;
+var f = null;
+var d = null;
+var b = null;
+var la = null;
+function findBody(doc){
+  for(var i = 0; i < doc.childNodes.length; ++i){
+    if(doc.childNodes[i].nodeName == 'HTML'){
+      for(var j = 0; j < doc.childNodes[i].childNodes.length; ++j){
+        if(doc.childNodes[i].childNodes[j].nodeName == 'BODY'){
+          return doc.childNodes[i].childNodes[j];
+        }
+      }
+    }
+  }
+  return null;
+}
+function onLoad1(){
+
+  f = document.getElementById('f');
+  d = f.contentDocument;
+  b = findBody(d);
+  d.charset = 'utf-8';
+  b.contentEditable = true;
+  b.innerHTML = '<div>HELLO WORLD</div>';
+  b.focus();
+}
+</script> -->
+
+
+
+</head>
+<body>
+
+<iframe name="f" id="f" src="about:blank" width="200" height="150"></iframe><br/>
+
+
+
+</body>
+</html>

@@ -31,8 +31,6 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 
 	<h1><?php echo $filename; ?></h1>
 
-	<!-- <textarea id="comment1" style="width:500px;height:400px"></textarea> -->
-	<!-- <textarea id="comment2" style="width:500px;height:400px"></textarea> -->
 
 <form action="" name="fo1">
 <textarea id="comment1"></textarea><br>
