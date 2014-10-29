@@ -1,5 +1,5 @@
 window.onload = function  () {
-	consle.log('onload');
+	console.log('onload');
 	f = document.getElementById('f');
   d = f.contentDocument;
   b = findBody(d);
