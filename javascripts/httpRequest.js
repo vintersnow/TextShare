@@ -8,7 +8,7 @@ window.onload = function() {
 		var timer = setInterval( mainLoop, 16 );
 		document.onkeydown = onKeyDown;
 	}
-}
+};
 
 
 // キーチェック

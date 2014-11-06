@@ -10,21 +10,21 @@ window.onload = function () {
 
 function onKeyDown( e ) {
 	//ここでサーバに送信する！
+    var xmlHttpRequestForKeyDown = new XMLHttpRequest();
 
-	var xmlHttpRequest = new XMLHttpRequest();
-    xmlHttpRequest.open( "POST", 'input.php', true );
+    xmlHttpRequestForKeyDown.open( "POST", 'input.php?filenumber=3', true );
 
-    xmlHttpRequest.onreadystatechange = function() {
+    xmlHttpRequestForKeyDown.onreadystatechange = function() {
         // 受信！
-        if ( xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200){
+        if ( xmlHttpRequestForKeyDown.readyState == 4 && xmlHttpRequestForKeyDown.status == 200){
 
-            console.log(xmlHttpRequest.responseText);
+            console.log(xmlHttpRequestForKeyDown.responseText);
           }
     };
 
     var text = { filename:filename, text:text_co1.value};
-    xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xmlHttpRequest.send( EncodeHTMLForm( text ) );
+    xmlHttpRequestForKeyDown.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xmlHttpRequestForKeyDown.send( EncodeHTMLForm( text ) );
 
  	text_co2.value = text_co1.value;
 
@@ -43,6 +43,6 @@ function EncodeHTMLForm( data )
 
         params.push( param );
     }
-
+    console.log(params);
     return params.join( '&' );
 }
