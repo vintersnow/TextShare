@@ -42,17 +42,26 @@
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
-    editor.getSession().setMode("ace/mode/javascript");
+    var es = editor.getSession();
+    es.setMode("ace/mode/javascript");
     editor.setValue("// text for setValue");
     var doc = editor.getSession().getDocument();
-    var acetext ;
+
+
+var ee;
     editor.on('change',function (e) {
       acetext =  editor.getValue();
-      // editor.setValue(acetext);
+      ee = e;
+      // console.log(editor.getSelection().getCursor());
+      console.log(e);
 
       $('#text').text(e.type);
     });
+    var sel = editor.getSelection();
+    sel.on('changeCursor',function () {
+      // console.log(sel.getCursor());
 
+    })
     //var es = ace.EditSession('test',);
 
 </script>
