@@ -3,7 +3,7 @@ var fs = require("fs");
 var port = process.env.PORT || 8080;
 var server = require("http").createServer(function(req, res) {
      res.writeHead(200, {"Content-Type":"text/html"});
-     var output = fs.readFileSync("./index.html", "utf-8");
+     var output = fs.readFileSync("./test.html", "utf-8");
      res.end(output);
 }).listen(port);
 var io = require("socket.io").listen(server);
@@ -23,7 +23,7 @@ io.sockets.on("connection", function (socket) {
 
   // メッセージ送信カスタムイベント
   socket.on("publish", function (data) {
-    io.sockets.emit("publish", {value:data.value});
+    io.sockets.emit("publish", data);
   });
 
   // 接続終了組み込みイベント(接続元ユーザを削除し、他ユーザへ通知)

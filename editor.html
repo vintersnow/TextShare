@@ -25,6 +25,12 @@
   </style>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- <script src="javascripts/main.js"></script> -->
+
 </head>
 <body>
 <div>
@@ -35,10 +41,9 @@
     }
 }</pre>
 </div>
-<div>
-<p id="text"></p>
+<div id="text">
 </div>
-<script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
@@ -47,7 +52,6 @@
     editor.setValue("// text for setValue");
     var doc = editor.getSession().getDocument();
 
-
 var ee;
     editor.on('change',function (e) {
       acetext =  editor.getValue();
@@ -55,7 +59,7 @@ var ee;
       // console.log(editor.getSelection().getCursor());
       console.log(e);
 
-      $('#text').text(e.type);
+      // $('#text').text(e.type);
     });
     var sel = editor.getSelection();
     sel.on('changeCursor',function () {

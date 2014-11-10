@@ -1,0 +1,14 @@
+{
+  "name": "textShare",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "izuku",
+  "license": "ISC",
+  "dependencies":{
+   	"socket.io":"1.2.0"
+   }
+}
