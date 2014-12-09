@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>testJS</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+<script>
+	/*
+ * # runstant
+ * さぁ, 一緒にゲームプログラミングを始めよう!!
+ * ってことで tmlib.js の公式エディタツール runstant です(tmlibのステマ)
+ */
+
+console.log("Hello, runstant!");
+
+var Text_Data =function () {
+ this.lines = {};
+}
+Text_Data.prototype={
+	getLines:function() {
+		return this.lines;
+	},
+ insertText:function (range,text){
+  if (this.lines[range.row]==null) {this.lines[range.row]=''}
+  	console.log(this.lines[range.row]);
+  var bef=this.lines[range.row].substr(0,range.column);
+  var aft=this.lines[range.row].substr(range.column);
+  this.lines[range.row]=bef+text+aft;
+  }
+};
+
+var text = new Text_Data();
+console.log(text);
+console.log(text.getLines());
+text.insertText({row:0,column:0},'a');
+console.log("Hello, runstant!");
+console.log(text.lines);
+console.log("Hello, runstant!");
+</script>
+</body>
+</html>
